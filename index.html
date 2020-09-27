@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hack.css</title>
+    <link rel="stylesheet" href="./prism.css">
+    <link rel="stylesheet" href="./hack.css">
+    <link rel="stylesheet" href="./site.css">
+  </head>
+  <body class="hack"><a href="https://github.com/sukima/hackcss-ext" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <div class="main container">
+      <h1>hack.css - dead simple css framework</h1>
+      <p>As you can see, this website is proudly built using hack.css.</p>
+      <div class="alert alert-info">New! <a href="/dark.html">dark</a>, <a href="/dark-grey.html">dark-grey</a>, <a href="/solarized-dark.html">solarized-dark</a> and <a href="/standard.html">standard</a> modes are now available!</div>
+      <h2>About</h2>
+      <p>Many hackers enjoy the readability of markdown code, some stylings in hack.css are exactly the way markdown is.</p>
+      <ul>
+        <li>conquer the world</li>
+        <li>rule the web</li>
+        <li>copy the code</li>
+      </ul>
+      <p><a target="_blank" href="https://daringfireball.net/projects/markdown/">kinda cool, huh?</a></p>
+      <p>hack.css is inspired by <a href="https://github.com/mrcoles/markdown-css" target="_blank">markdown.css</a> and <a href="http://zeit.co" target="_blank">zeit.co</a></p>
+      <h2>Use cases</h2>
+      <p>hack.css is <strong>perfect</strong> for the homepage of your open-source projects! happy <code>&lt;coding&gt;</code> !</p>
+      <h2>How to use?</h2>
+      <p>Install via npm by running <code>npm install -S hack</code> and load it with your preferred pre-processor.</p>
+      <p>You can also simply hot-link the url of the css file.</p>
+      <p>The last step is to add the <code>.hack</code> class to your body element.</p><pre><code class="lang-html">&lt;!-- required in all modes --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/hack.css&quot;&gt;
+
+&lt;!-- markdown mode --&gt;
+&lt;body class=&quot;hack&quot;&gt;&lt;/body&gt;
+
+&lt;!-- standard mode --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/standard.css&quot;&gt;
+&lt;body class=&quot;standard&quot;&gt;&lt;/body&gt;
+
+&lt;!-- dark mode --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/dark.css&quot;&gt;
+&lt;body class=&quot;hack dark&quot;&gt;&lt;/body&gt;
+</code></pre>
+
+      <h2>User guide</h2>
+      <h3>Basic</h3>
+      <p>Use <code>.container</code> to centralize the main content.</p>
+      <p>Use <strong>flexbox</strong> to make layouts.</p>
+      <div class="example">
+        <div class="grid grid-example">
+          <div class="cell -4of12">
+            <div class="content">4</div>
+          </div>
+          <div class="cell -4of12">
+            <div class="content">4</div>
+          </div>
+          <div class="cell -4of12">
+            <div class="content">4</div>
+          </div>
+        </div>
+        <div class="grid grid-example">
+          <div class="cell -4of12">
+            <div class="content">4</div>
+          </div>
+          <div class="cell -8of12">
+            <div class="content">8</div>
+          </div>
+        </div>
+        <div class="grid grid-example">
+          <div class="cell">
+            <div class="content">1</div>
+          </div>
+          <div class="cell">
+            <div class="content">1</div>
+          </div>
+          <div class="cell">
+            <div class="content">1</div>
+          </div>
+          <div class="cell">
+            <div class="content">1</div>
+          </div>
+          <div class="cell">
+            <div class="content">1</div>
+          </div>
+          <div class="cell">
+            <div class="content">1</div>
+          </div>
+          <div class="cell">
+            <div class="content">1</div>
+          </div>
+          <div class="cell">
+            <div class="content">1</div>
+          </div>
+          <div class="cell">
+            <div class="content">1</div>
+          </div>
+          <div class="cell">
+            <div class="content">1</div>
+          </div>
+          <div class="cell">
+            <div class="content">1</div>
+          </div>
+          <div class="cell">
+            <div class="content">1</div>
+          </div>
+        </div>
+      </div>
+      <h4><code>.grid</code> modifiers</h4>
+      <ul>
+        <li>To align items with <strong>align-items</strong>
+          <ul>
+            <li><strong>-top</strong>: To top</li>
+            <li><strong>-middle</strong>: To middle</li>
+            <li><strong>-bottom</strong>: To bottom</li>
+            <li><strong>-stretch</strong>: Stretch items</li>
+            <li><strong>-baseline</strong>: To baseline</li>
+          </ul>
+        </li>
+        <li>To layout contents with <strong>justify-content</strong>
+          <ul>
+            <li><strong>-left</strong>: To left</li>
+            <li><strong>-center</strong>: To center</li>
+            <li><strong>-right</strong>: To right</li>
+            <li><strong>-between</strong>: Add spaces between items</li>
+            <li><strong>-around</strong>: Add spaces around items</li>
+          </ul>
+        </li>
+      </ul>
+      <h4><code>.cell</code> modifiers</h4>
+      <ul>
+        <li><strong>-1of12</strong>: Set item width to 8.3% of parent</li>
+        <li><strong>-2of12</strong>: Set item width to 16.7% of parent</li>
+        <li><strong>-3of12</strong>: Set item width to 25% of parent</li>
+        <li><strong>-4of12</strong>: Set item width to 33% of parent</li>
+        <li><strong>-5of12</strong>: Set item width to 41.7% of parent</li>
+        <li><strong>-6of12</strong>: Set item width to 50% of parent</li>
+        <li><strong>-7of12</strong>: Set item width to 58.3% of parent</li>
+        <li><strong>-8of12</strong>: Set item width to 66.7% of parent</li>
+        <li><strong>-9of12</strong>: Set item width to 75% of parent</li>
+        <li><strong>-10of12</strong>: Set item width to 83.3% of parent</li>
+        <li><strong>-11of12</strong>: Set item width to 91.7% of parent</li>
+        <li><strong>-12of12</strong>: Set item width to 100% of parent</li>
+      </ul>
+      <h3>Components</h3>
+      <h4>&lt;hr&gt;</h4>
+      <hr>
+      <h4>List</h4>
+      <ul>
+        <li>foo
+          <ul>
+            <li>sub foo</li>
+            <li>sub bar</li>
+            <li>sub baz</li>
+          </ul>
+        </li>
+        <li>bar</li>
+        <li>baz</li>
+      </ul>
+      <h4>Blockquote</h4>
+      <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quis cumque similique voluptas facilis fugit inventore odit, quidem et ab, quos, blanditiis iure! Ipsum nostrum corrupti architecto fugit, culpa expedita.</blockquote>
+      <h4>Form</h4>
+      <form class="form">
+        <fieldset class="form-group">
+          <label for="username">USERNAME:</label>
+          <input id="username" type="text" placeholder="type your name..." class="form-control">
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="email">EMAIL:</label>
+          <input id="email" type="email" placeholder="" class="form-control">
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="country">COUNTRY:</label>
+          <select id="country" class="form-control">
+            <option>China</option>
+            <option>U.S.</option>
+            <option>U.K.</option>
+            <option>Japan</option>
+          </select>
+        </fieldset>
+        <fieldset class="form-group form-textarea">
+          <label for="message">MESSAGE:</label>
+          <textarea id="message" rows="5" class="form-control">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam placeat ratione nisi assumenda quo saepe quasi iste temporibus asperiores. Soluta cupiditate quam at reprehenderit facere. Asperiores nulla rerum earum pariatur.</textarea>
+        </fieldset>
+        <div class="form-actions">
+          <button type="button" class="btn btn-primary btn-block">Submit</button>
+        </div>
+      </form><pre><code class="lang-html">&lt;form class=&quot;form&quot;&gt;
+  &lt;fieldset class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;username&quot;&gt;USERNAME:&lt;/label&gt;
+    &lt;input id=&quot;username&quot; type=&quot;text&quot; placeholder=&quot;type your name...&quot; class=&quot;form-control&quot;&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;email&quot;&gt;EMAIL:&lt;/label&gt;
+    &lt;input id=&quot;email&quot; type=&quot;email&quot; placeholder=&quot;&quot; class=&quot;form-control&quot;&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;country&quot;&gt;COUNTRY:&lt;/label&gt;
+    &lt;select id=&quot;country&quot; class=&quot;form-control&quot;&gt;
+      &lt;option&gt;China&lt;/option&gt;
+      &lt;option&gt;U.S.&lt;/option&gt;
+      &lt;option&gt;U.K.&lt;/option&gt;
+      &lt;option&gt;Japan&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class=&quot;form-group form-textarea&quot;&gt;
+    &lt;label for=&quot;message&quot;&gt;MESSAGE:&lt;/label&gt;
+    &lt;textarea id=&quot;message&quot; rows=&quot;5&quot; class=&quot;form-control&quot;&gt;&lt;/textarea&gt;
+  &lt;/fieldset&gt;
+  &lt;div class=&quot;form-actions&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-block&quot;&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+
+      <h5>Stateful Form</h5>
+      <form class="form">
+        <fieldset class="form-group form-success">
+          <label for="username2">USERNAME:</label>
+          <input id="username2" type="text" placeholder="type your name..." class="form-control">
+        </fieldset>
+        <fieldset class="form-group form-warning">
+          <label for="age">AGE:</label>
+          <input id="age" type="text" placeholder="" class="form-control">
+        </fieldset>
+      </form><pre><code class="lang-html">.form-group.form-success
+.form-group.form-error
+.form-group.form-warning
+</code></pre>
+
+      <h5>Help Block</h5>
+      <form class="form">
+        <fieldset class="form-group form-success">
+          <label for="phone">Phone Number:</label>
+          <input id="phone" type="text" value="+86 180 800 8000" placeholder="" class="form-control">
+          <div class="help-block">In this format: +86 xxx xxx xxxxx</div>
+        </fieldset>
+        <fieldset class="form-group form-error">
+          <label for="email3">EMAIL:</label>
+          <input id="email3" type="email" placeholder="" class="form-control">
+        </fieldset>
+      </form><pre><code class="lang-html">&lt;fieldset class=&quot;form-group form-success&quot;&gt;
+  &lt;label for=&quot;phone&quot;&gt;Phone Number:&lt;/label&gt;
+  &lt;input id=&quot;phone&quot; type=&quot;text&quot; placeholder=&quot;&quot; class=&quot;form-control&quot;&gt;
+  &lt;div class=&quot;help-block&quot;&gt;In this format: +86 xxx xxx xxxxx&lt;/div&gt;
+&lt;/fieldset&gt;
+</code></pre>
+
+      <h4>Table</h4><table>
+<thead>
+<tr>
+<th>editor</th>
+<th>speed</th>
+<th>extension</th>
+<th>interface</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sublime</td>
+<td>90</td>
+<td>80</td>
+<td>70</td>
+</tr>
+<tr>
+<td>atom</td>
+<td>60</td>
+<td>85</td>
+<td>80</td>
+</tr>
+<tr>
+<td>vscode</td>
+<td>80</td>
+<td>65</td>
+<td>60</td>
+</tr>
+</tbody>
+</table>
+
+      <h4>Progress bar</h4>
+      <div class="progress-bar progress-bar-show-percent">
+        <div style="width:40%;" data-filled="Loading 40%" class="progress-bar-filled"></div>
+      </div><pre><code class="lang-html">&lt;!-- with only an arrow --&gt;
+&lt;div class=&quot;progress-bar&quot;&gt;
+  &lt;div class=&quot;progress-bar-filled&quot; style=&quot;width: 40%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- with a percentage showing above the arrow --&gt;
+&lt;div class=&quot;progress-bar progress-bar-show-percent&quot;&gt;
+  &lt;div class=&quot;progress-bar-filled&quot; style=&quot;width: 40%&quot; data-filled=&quot;Loading 40%&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+      <h4>Buttons</h4>
+      <div class="example">
+        <button class="btn btn-default">Default</button>
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-success">Success</button>
+        <button class="btn btn-info">Info</button>
+        <button class="btn btn-warning">Warning</button>
+        <button class="btn btn-error">Error</button>
+      </div>
+      <div class="example">
+        <button class="btn btn-default btn-ghost">Default Ghost</button>
+        <button class="btn btn-primary btn-ghost">Primary Ghost</button>
+        <button class="btn btn-success btn-ghost">Success Ghost</button>
+        <button class="btn btn-info btn-ghost">Info Ghost</button>
+        <button class="btn btn-warning btn-ghost">Warning Ghost</button>
+        <button class="btn btn-error btn-ghost">Error Ghost</button>
+      </div>
+      <div class="example">
+        <button class="btn btn-primary btn-block btn-ghost">Block Level Button</button>
+      </div><pre><code class="lang-html">&lt;button class=&quot;btn btn-default&quot;&gt;Default&lt;/button&gt;
+&lt;button class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+&lt;button class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
+&lt;button class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button class=&quot;btn btn-error&quot;&gt;Error&lt;/button&gt;
+
+&lt;button class=&quot;btn btn-primary btn-ghost&quot;&gt;Ghost Button&lt;/button&gt;
+
+&lt;button class=&quot;btn btn-primary btn-block&quot;&gt;Block Level Button&lt;/button&gt;
+</code></pre>
+
+      <h4>Button group</h4>
+      <div class="example">
+        <div class="btn-group">
+          <button class="btn btn-success btn-ghost">Left</button>
+          <button class="btn btn-success btn-ghost">Middle</button>
+          <button class="btn btn-success btn-ghost">Right</button>
+        </div>
+      </div><pre><code class="lang-html">&lt;div class=&quot;btn-group&quot;&gt;
+  &lt;button class=&quot;btn btn-success btn-ghost&quot;&gt;Left&lt;/button&gt;
+  &lt;button class=&quot;btn btn-success btn-ghost&quot;&gt;Middle&lt;/button&gt;
+  &lt;button class=&quot;btn btn-success btn-ghost&quot;&gt;Right&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+
+      <h4>Card</h4>
+      <div class="grid">
+        <div class="cell -4of12">
+          <div class="card">
+            <header class="card-header">title</header>
+            <div class="card-body">
+              <div class="inner">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quas ex vero enim in doloribus officiis ullam vel nam esse sapiente velit incidunt. Eaque quod et, aut maiores excepturi sint.</div>
+            </div>
+          </div>
+        </div>
+      </div><pre><code class="lang-html">&lt;div class=&quot;card&quot;&gt;
+  &lt;header class=&quot;card-header&quot;&gt;title&lt;/header&gt;
+  &lt;div class=&quot;card-content&quot;&gt;
+    &lt;div class=&quot;inner&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quas ex vero enim in doloribus officiis ullam vel nam esse sapiente velit incidunt. Eaque quod et, aut maiores excepturi sint.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+      <h4>Alerts</h4>
+      <div class="example">
+        <div class="alert alert-success">Success message</div>
+        <div class="alert alert-info">Info message</div>
+        <div class="alert alert-warning">Warning message</div>
+        <div class="alert alert-error">Error message</div>
+      </div><pre><code class="lang-html">&lt;div class=&quot;alert alert-success&quot;&gt;Success message&lt;/div&gt;
+&lt;div class=&quot;alert alert-info&quot;&gt;Info message&lt;/div&gt;
+&lt;div class=&quot;alert alert-warning&quot;&gt;Warning message&lt;/div&gt;
+&lt;div class=&quot;alert alert-error&quot;&gt;Error message&lt;/div&gt;
+</code></pre>
+
+      <h4>Menu</h4>
+      <div class="example">
+        <div class="grid">
+          <div class="cell -3of12">
+            <div class="menu"><a class="menu-item">item #1
+                <div class="pull-right">&#xbb;</div></a><a class="menu-item active">item #2
+                <div class="pull-right">&#xbb;</div></a><a class="menu-item">item #3
+                <div class="pull-right">&#xbb;</div></a></div>
+          </div>
+        </div>
+      </div><pre><code class="lang-html"> &lt;div class=&quot;menu&quot;&gt;
+   &lt;a class=&quot;menu-item&quot;&gt;
+     item #1 &lt;div class=&quot;pull-right&quot;&gt;»&lt;/div&gt;
+   &lt;/a&gt;
+   &lt;a class=&quot;menu-item active&quot;&gt;
+     item #2 &lt;div class=&quot;pull-right&quot;&gt;»&lt;/div&gt;
+   &lt;/a&gt;
+   &lt;a class=&quot;menu-item&quot;&gt;
+     item #3 &lt;div class=&quot;pull-right&quot;&gt;»&lt;/div&gt;
+   &lt;/a&gt;
+ &lt;/div&gt;
+</code></pre>
+
+      <h4 id="modal-dialogs">Modal Dialogs</h4>
+      <p>Modals are hidden by default. They open with the class <code>open</code> or by referencing its ID from the URL fragment.</p>
+      <div class="example"><a href="#open-modal" class="btn btn-primary btn-block btn-ghost">Open Modal Dialog</a>
+        <dialog id="open-modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1>Modal Example</h1>
+            </div>
+            <div class="modal-body">
+              <p>Elit non impedit quos adipisicing vel? Eius nostrum atque illo facilis inventore, fugit Totam veritatis quos esse minus maiores Molestiae est reprehenderit ad itaque delectus pariatur quos. Nisi eaque quod.</p>
+            </div>
+            <div class="modal-footer"><a href="#modal-dialogs" class="btn btn-primary btn-ghost">Close</a></div>
+          </div>
+        </dialog>
+      </div><pre><code class="lang-html">&lt;a href=&quot;#open-modal&quot;&gt;Open Modal Dialog&lt;/a&gt;
+
+&lt;dialog id=&quot;open-modal&quot; class=&quot;modal&quot;&gt;
+  &lt;div class=&quot;modal-content&quot;&gt;
+    &lt;div class=&quot;modal-header&quot;&gt;
+      &lt;h1&gt;Modal Example&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;modal-body&quot;&gt;
+      &lt;p&gt;Lorem Ipsum&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;modal-footer&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Close&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;
+</code></pre>
+
+      <h4>Media</h4>
+      <p>This is useful if you intend to display a list of items, like the Twitter timeline.</p>
+      <div class="example">
+        <div class="media">
+          <div class="media-left">
+            <div class="avatarholder">e</div>
+          </div>
+          <div class="media-body">
+            <div class="media-heading">EGOIST @egoist</div>
+            <div class="media-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vel, voluptates, doloremque nesciunt illum est corrupti nostrum expedita adipisci dicta vitae? Eveniet maxime quibusdam modi molestias alias et incidunt est.</div>
+          </div>
+        </div>
+      </div>
+      <div class="media">
+        <div class="media-body">
+          <div class="media-heading">EGOIST @egoist</div>
+          <div class="media-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vel, voluptates, doloremque nesciunt illum est corrupti nostrum expedita adipisci dicta vitae? Eveniet maxime quibusdam modi molestias alias et incidunt est.</div>
+        </div>
+        <div class="media-right">
+          <div class="avatarholder">e</div>
+        </div>
+      </div><pre><code class="lang-html">&lt;!-- left align --&gt;
+&lt;div class=&quot;media&quot;&gt;
+  &lt;div class=&quot;media-left&quot;&gt;
+    &lt;div class=&quot;avatarholder&quot;&gt;e&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;div class=&quot;media-heading&quot;&gt;EGOIST @egoist&lt;/div&gt;
+    &lt;div class=&quot;media-content&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vel, voluptates, doloremque nesciunt illum est corrupti nostrum expedita adipisci dicta vitae? Eveniet maxime quibusdam modi molestias alias et incidunt est.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- right align --&gt;
+&lt;div class=&quot;media&quot;&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;div class=&quot;media-heading&quot;&gt;EGOIST @egoist&lt;/div&gt;
+    &lt;div class=&quot;media-content&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vel, voluptates, doloremque nesciunt illum est corrupti nostrum expedita adipisci dicta vitae? Eveniet maxime quibusdam modi molestias alias et incidunt est.&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;media-right&quot;&gt;
+    &lt;div class=&quot;avatarholder&quot;&gt;e&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+      <h4> Loading</h4>
+      <p>hack.css gives you a default loading element, but you can find more at <a href="https://www.pexels.com/blog/css-only-loaders/">CSS-only loaders</a>.</p>
+      <div class="example">
+        <div class="loading"></div>
+      </div>
+      <div class="example">
+        <button class="btn btn-info btn-ghost">Loading&hellip;<span class="loading"></span></button>
+      </div>
+      <div class="example">
+        <div class="alert alert-info"><span class="loading"></span>Loading in an alert box&hellip;</div>
+      </div><pre><code class="lang-html">&lt;div class=&quot;loading&quot;&gt;&lt;/div&gt;
+
+&lt;button class=&quot;btn btn-info btn-ghost&quot;&gt;
+  Loading&amp;hellip;
+  &lt;span class=&quot;loading&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;div class=&quot;alert alert-info&quot;&gt;
+  &lt;span class=&quot;loading&quot;&gt;&lt;/span&gt;
+  Loading in an alert box&amp;hellip;
+&lt;/div&gt;
+</code></pre>
+
+    </div>
+    <script src="./prism.js" async></script>
+  </body>
+</html>
