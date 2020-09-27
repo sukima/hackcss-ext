@@ -1,0 +1,57 @@
+@define-mixin form-label $color {
+  color: $color !important;
+  border-color: $color !important;
+}
+
+@define-mixin button $color, $hover-color {
+  color: white;
+  background-color: $color;
+  border: 1px solid $color;
+  &:hover, &:focus:not(.btn-ghost) {
+    background-color: $hover-color;
+    border-color: $hover-color;
+  }
+}
+
+@define-mixin alert $color {
+  color: $color;
+  border-color: $color;
+}
+
+@define-mixin button-ghost $color, $hover-color {
+  border-color: $color;
+  color: $color;
+  &:hover, &:focus {
+    border-color: $hover-color;
+    color: $hover-color;
+    z-index: 2;
+  }
+}
+
+@define-mixin button-ghost-dark $hover-color {
+  &:hover, &:focus {
+    border-color: $hover-color;
+    color: $hover-color;
+  }
+}
+
+@define-mixin buttons-ghost-dark $default, $primary, $success, $info, $error, $warning {
+    &.btn-default {
+      @mixin button-ghost-dark $default;
+    }
+    &.btn-primary {
+      @mixin button-ghost-dark $primary;
+    }
+    &.btn-success {
+      @mixin button-ghost-dark $success
+    }
+    &.btn-info {
+      @mixin button-ghost-dark $info;
+    }
+    &.btn-error {
+      @mixin button-ghost-dark $error;
+    }
+    &.btn-warning {
+      @mixin button-ghost-dark $warning;
+    }
+}

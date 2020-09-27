@@ -1,0 +1,438 @@
+/**
+ * Progress Bar
+ */
+
+.progress-bar {
+  height: 8px;
+  opacity: .8;
+  background-color: #ccc;
+  margin-top: 12px;
+  &.progress-bar-show-percent {
+    margin-top: 38px;
+  }
+}
+
+.progress-bar-filled {
+  background-color: #808080;
+  height: 100%;
+  transition: width .3s ease;
+  position: relative;
+  width: 0%;
+
+  &:before {
+    content: '';
+    border: 6px solid transparent;
+    border-top-color: #808080;
+    position: absolute;
+    top: -12px;
+    right: -6px;
+  }
+  &:after {
+    color: #808080;
+    content: attr(data-filled);
+    display: block;
+    font-size: 12px;
+    white-space: nowrap;
+    position: absolute;
+    border: 6px solid transparent;
+    top: -38px;
+    right: 0;
+    transform: translateX(50%);
+  }
+}
+
+/**
+ * Table
+ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.75rem 0;
+  color: #778087;
+  & td,
+  & th {
+    vertical-align: top;
+    border: 1px solid #ccc;
+    line-height: 15px;
+    padding: 10px;
+  }
+  & thead th {
+    font-size: 10px;
+  }
+  & tbody td:first-child {
+    font-weight: 700;
+    color: #333;
+  }
+}
+
+/**
+ * Form
+ */
+.form {
+  width: 30rem
+}
+
+.form-group {
+  margin-bottom: 1.75rem;
+  overflow: auto;
+  & label {
+    border-bottom: 2px solid #ccc;
+    color: #333;
+    width: 10rem;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0;
+    float: left;
+    position: relative;
+  }
+
+  &.form-success label {
+    @mixin form-label $green;
+  }
+
+  &.form-warning label {
+    @mixin form-label $orange;
+  }
+
+  &.form-error label {
+    @mixin form-label $red;
+  }
+}
+
+.form-control {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: .5rem 0;
+  width: 20rem;
+  height: 38px;
+  background-color: transparent;
+  &:focus {
+    border-color: #555;
+  }
+}
+
+.form-group.form-textarea label:after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  background-color: white;
+  right: -2px;
+  top: 0;
+  bottom: 0;
+}
+
+textarea.form-control {
+  height: auto;
+  resize: none;
+  padding: 1rem 0;
+  border-bottom: 2px solid #ccc;
+  border-left: 2px solid #ccc;
+  padding: .5rem;
+}
+
+select.form-control {
+  border-radius: 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
+
+.help-block {
+  color: #999;
+  margin-top: .5rem;
+}
+
+.form-actions {
+  margin-bottom: 1.75rem;
+}
+
+/**
+ * Buttons
+ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  padding: .65rem 2rem;
+  font-size: 1rem;
+  user-select: none;
+  position: relative;
+  z-index: 1;
+  &:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+  }
+
+  &.btn-ghost {
+    @mixin button-ghost $grey-600, $grey-800;
+    background-color: transparent;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.btn-block {
+  width: 100%;
+  display: flex;
+}
+
+.btn-default {
+  @mixin button $grey-300, #dcdcdc;
+  color: #333;
+}
+
+.btn-success {
+  @mixin button $green, $green-600;
+
+  &.btn-ghost {
+    @mixin button-ghost $green, $green-700;
+  }
+}
+
+.btn-error {
+  @mixin button $red, $red-600;
+
+  &.btn-ghost {
+    @mixin button-ghost $red, $red-700;
+  }
+}
+
+.btn-warning {
+  @mixin button $orange, $orange-600;
+
+  &.btn-ghost {
+    @mixin button-ghost $orange, $orange-700;
+  }
+}
+
+.btn-info {
+  @mixin button $cyan, $cyan-600;
+
+  &.btn-ghost {
+    @mixin button-ghost $cyan, $cyan-700;
+  }
+}
+
+.btn-primary {
+  @mixin button $blue, $blue-600;
+
+  &.btn-ghost {
+    @mixin button-ghost $blue, $blue-700;
+  }
+}
+
+.btn-group {
+  overflow: auto;
+  & .btn {
+    float: left;
+  }
+
+  & .btn-ghost {
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
+  }
+}
+
+/**
+ * Card
+ */
+.card {
+  border: 1px solid #ccc;
+  & .card-header {
+    color: #333;
+    text-align: center;
+    background-color: #ddd;
+    padding: .5rem 0;
+  }
+}
+
+/**
+ * Alerts
+ */
+.alert {
+  color: #ccc;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 1.75rem;
+}
+
+.alert-success {
+  @mixin alert $green;
+}
+
+.alert-error {
+  @mixin alert $red;
+}
+
+.alert-info {
+  @mixin alert $cyan;
+}
+
+.alert-warning {
+  @mixin alert $orange;
+}
+
+/**
+ * Media
+ */
+.media:not(:last-child) {
+  margin-bottom: calc(15/12)rem;
+}
+
+.media-left {
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 1rem;
+}
+
+.media-right {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 1rem;
+}
+
+.media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.media-heading {
+  font-size: calc(14/12)rem;
+  font-weight: 700;
+}
+
+.media-content {
+  margin-top: .3rem;
+}
+
+/**
+ * Holders
+ */
+.placeholder,
+.avatarholder {
+  background-color: #f0f0f0;
+  text-align: center;
+  color: #b9b9b9;
+  font-size: 1rem;
+  border: 1px solid #f0f0f0;
+}
+
+.avatarholder {
+  width: 48px;
+  height: 48px;
+  line-height: 46px;
+  font-size: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &.rounded {
+    border-radius: 33px;
+  }
+}
+
+/**
+ * Loading
+ */
+.loading {
+  display: inline-block;
+  content: '&nbsp;';
+  height: 20px;
+  width: 20px;
+  margin: 0 .5rem;
+  animation: rotate 0.6s infinite linear;
+  border: 2px solid $pink;
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+
+.btn .loading {
+  margin-bottom: 0;
+  width: 14px;
+  height: 14px;
+}
+
+/* Remains for backwards compatibility */
+.btn div.loading {
+  float: left;
+}
+
+.alert .loading {
+  margin-bottom: -5px;
+}
+
+@keyframes rotate {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}
+
+/**
+ * Menu
+ */
+.menu {
+  width: 100%;
+  & .menu-item {
+    display: block;
+    color: $grey-700;
+    border-color: $grey-700;
+
+    &:hover, &.active {
+      color: black;
+      border-color: black;
+      background-color: transparent;
+    }
+  }
+}
+
+/**
+ * Modal
+ */
+.modal {
+  display: none;
+  position: fixed;
+  background: transparent;
+  border: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  z-index: 9000;
+  transition: background 1s;
+  visibility: hidden;
+  width: 100%;
+
+  &:target, &.open, &[open] {
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    visibility: visible;
+  }
+
+  & .modal-content {
+    padding: 20px 20px 10px 20px;
+    background: #fff;
+    color: #000;
+    width: 50vw;
+    border-radius: .2em;
+    position: relative;
+    max-height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+
+    & .modal-footer {
+      text-align: right;
+    }
+
+    & > * {
+      width: 100%;
+    }
+  }
+}

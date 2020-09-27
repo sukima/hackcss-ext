@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title standard mode of hack.css
+    link(rel="stylesheet" href="./prism.css")
+    link(rel="stylesheet" href="./hack.css")
+    link(rel="stylesheet" href="./standard.css")
+    link(rel="stylesheet" href="./site.css")
+
+  body.standard
+    .main.container
+      p
+        a(href="/") &laquo; Back to home
+      h2 Standard mode
+      p Note: standard mode uses a different font and font-size to make it more readable.
+
+      h2 Usage
+      :marked
+        ```html
+        <link rel="stylesheet" href="/path/to/hack.css" />
+        <link rel="stylesheet" href="/path/to/standard.css" />
+        <body class="standard">
+          ...
+        </body>
+        ```
+
+      h2 Components
+
+      include components
+
+      script(src="./prism.js" async)
